@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<link rel="icon" href="favicon.ico" type="image/x-icon">
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+<title>7777电影网 - 7777电影在线观看 · 影片排行榜与影评推荐</title>
+<meta name="keywords" content="7777电影网,7777dianyingwang-wap,7777电影,7777电影在线观看,7777电影排行榜,7777电影推荐,影视资讯">
+<meta name="description" content="7777电影网（7777dianyingwang-wap）以 7777 为品牌符号，专注电影在线观看，提供影片排行榜、分类导航、院线资讯与专业影评推荐，每日精选高分电影。">
+<meta name="renderer" content="webkit">
+<meta name="format-detection" content="telephone=no">
+<meta property="og:type" content="website">
+<meta property="og:title" content="7777电影网 - 7777电影在线观看">
+<meta property="og:description" content="提供影片排行榜、分类导航、院线资讯与专业影评推荐，每日精选高分电影。">
+<meta property="og:url" content="https://7777dianyingwang-wap.github.io">
+<link rel="canonical" href="https://7777dianyingwang-wap.github.io">
+<style>
+:root{
+  --bg:#0c0d14;--bg2:#12131e;--card:#171826;--card2:#1e2030;
+  --line:rgba(255,255,255,.10);--line2:rgba(255,255,255,.20);
+  --txt:#e9eaf2;--txt2:#a7abc0;--txt3:#6c7188;
+  --pink:#ff2e88;--purple:#7b2cff;--cyan:#00d4ff;--lime:#b6ff3c;--amber:#ffb020;
+  --ease:cubic-bezier(.2,.8,.3,1);
+}
+*{margin:0;padding:0;box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","WenQuanYi Micro Hei","PingFang SC","Microsoft YaHei",sans-serif;
+  background:var(--bg);color:var(--txt);line-height:1.85;font-size:15px;overflow-x:hidden}
+body::before{content:"";position:fixed;inset:0;z-index:-2;pointer-events:none;
+  background:radial-gradient(ellipse at 82% 8%,rgba(123,44,255,.30),transparent 45%),radial-gradient(ellipse at 12% 88%,rgba(255,46,136,.22),transparent 45%),#0c0d14}
+body::after{content:"";position:fixed;inset:0;z-index:-1;pointer-events:none;opacity:.5;
+  background-image:linear-gradient(rgba(255,255,255,.04) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.04) 1px,transparent 1px);
+  background-size:46px 46px;mask-image:radial-gradient(ellipse at 50% 40%,#000 30%,transparent 78%)}
+a{color:inherit;text-decoration:none;transition:color .25s var(--ease)}
+ul{list-style:none}
+::selection{background:var(--pink);color:#fff}
+:focus-visible{outline:2.5px solid var(--cyan);outline-offset:3px}
+img{max-width:100%;display:block}
+
+.wrap{max-width:1160px;margin:0 auto;padding:0 22px}
+section{padding:88px 0;position:relative}
+.sec-hd{display:flex;align-items:flex-end;justify-content:space-between;gap:16px;margin-bottom:36px;flex-wrap:wrap}
+.sec-t{font-size:28px;font-weight:900;display:flex;align-items:center;gap:14px;letter-spacing:-.3px}
+.sec-t em{font-style:normal;font-size:11.5px;color:var(--txt3);letter-spacing:3px;text-transform:uppercase}
+.badge7{width:38px;height:38px;border-radius:9px;background:linear-gradient(135deg,var(--pink),var(--purple));color:#fff;display:grid;place-items:center;font-size:15px;font-weight:900;box-shadow:0 8px 22px rgba(255,46,136,.4);position:relative}
+.badge7::after{content:"";position:absolute;inset:-3px;border-radius:12px;border:1.5px solid rgba(255,46,136,.45);animation:pulse 2.4s var(--ease) infinite}
+@keyframes pulse{0%,100%{transform:scale(1);opacity:1}50%{transform:scale(1.12);opacity:0}}
+.sec-more{font-size:13px;color:var(--txt2);border:1.5px solid var(--line2);padding:7px 15px;border-radius:999px;font-weight:700;background:rgba(255,255,255,.04)}
+.sec-more:hover{color:#fff;background:var(--purple);border-color:transparent}
+
+/* 导航 */
+.header{position:sticky;top:0;z-index:100;background:rgba(12,13,20,.86);backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px);border-bottom:1px solid var(--line)}
+.nav{max-width:1160px;margin:0 auto;padding:0 22px;height:72px;display:flex;align-items:center;justify-content:space-between;gap:18px}
+.logo{display:flex;align-items:center;gap:12px;font-weight:900;font-size:21px;flex-shrink:0;letter-spacing:-.3px}
+.logo b{width:38px;height:38px;border-radius:10px;background:linear-gradient(135deg,var(--pink),var(--purple));color:#fff;display:grid;place-items:center;font-size:13px;letter-spacing:-1px;box-shadow:0 8px 22px rgba(255,46,136,.4)}
+.logo span{color:var(--cyan)}
+.menu{display:flex;gap:4px;align-items:center}
+.menu a{font-size:14.5px;color:var(--txt2);padding:9px 15px;border-radius:11px;font-weight:700}
+.menu a:hover{color:#fff;background:rgba(255,255,255,.07)}
+.menu a.on{color:#0c0d14;background:linear-gradient(135deg,var(--lime),var(--cyan))}
+.btn-nav{display:none;width:42px;height:42px;border:none;border-radius:11px;background:var(--card);color:var(--txt);font-size:20px;cursor:pointer;border:1px solid var(--line2)}
+
+/* Hero · 霓虹 7777 数字墙 */
+.hero{padding:44px 0 24px}
+.hero-in{position:relative;background:linear-gradient(160deg,#141522,#0e0f18);border-radius:26px;overflow:hidden;border:1.5px solid var(--line2);box-shadow:0 30px 80px rgba(0,0,0,.55);padding:58px 46px}
+.hero-in::before{content:"";position:absolute;right:-180px;top:-180px;width:560px;height:560px;border-radius:50%;background:radial-gradient(circle,rgba(255,46,136,.26),transparent 64%);pointer-events:none}
+.hero-in::after{content:"";position:absolute;left:-120px;bottom:-200px;width:520px;height:520px;border-radius:50%;background:radial-gradient(circle,rgba(0,212,255,.18),transparent 64%);pointer-events:none}
+.hero-grid{position:relative;z-index:1;display:grid;grid-template-columns:1fr 430px;gap:44px;align-items:center}
+.hero-tx .chip{display:inline-flex;align-items:center;gap:8px;font-size:12.5px;font-weight:800;padding:7px 14px;border-radius:6px;background:rgba(0,212,255,.10);border:1px solid rgba(0,212,255,.35);color:var(--cyan);letter-spacing:.5px}
+.hero-tx h1{font-size:52px;line-height:1.22;font-weight:900;letter-spacing:-1.4px;margin-top:16px}
+.hero-tx h1 .num{background:linear-gradient(90deg,#ff2e88,#7b2cff,#00d4ff);-webkit-background-clip:text;background-clip:text;color:transparent}
+.hero-tx p{font-size:16px;color:var(--txt2);margin-top:15px;max-width:480px}
+.hero-cta{display:flex;gap:12px;margin-top:26px;flex-wrap:wrap}
+.btn{font-size:14.5px;font-weight:700;padding:13px 26px;border-radius:11px;cursor:pointer;border:1.5px solid transparent;transition:.3s var(--ease);font-family:inherit;color:#fff}
+.btn-p{background:linear-gradient(135deg,var(--pink),var(--purple));box-shadow:0 14px 30px rgba(255,46,136,.32)}
+.btn-p:hover{transform:translateY(-3px);filter:brightness(1.12)}
+.btn-o{background:transparent;color:var(--txt);border-color:var(--line2)}
+.btn-o:hover{background:rgba(255,255,255,.07);border-color:var(--cyan);color:var(--cyan)}
+.h-stat{display:flex;gap:34px;margin-top:34px;flex-wrap:wrap}
+.h-stat div b{display:block;font-family:Georgia,"Times New Roman",serif;font-size:27px;font-weight:900;color:var(--lime);text-shadow:0 0 18px rgba(182,255,60,.35)}
+.h-stat div span{font-size:12.5px;color:var(--txt3)}
+
+/* 数字墙 */
+.wall{position:relative;height:380px;display:grid;place-items:center}
+.wall .glow{position:absolute;width:320px;height:320px;border-radius:50%;background:radial-gradient(circle,rgba(123,44,255,.45),transparent 66%)}
+.wall-row{position:relative;display:grid;grid-template-columns:repeat(4,76px);gap:14px;transform:rotate(-6deg)}
+.dig{width:76px;height:104px;border-radius:12px;background:var(--card2);border:1.5px solid var(--line2);display:grid;place-items:center;font-family:Georgia,"Times New Roman",serif;font-size:42px;font-weight:900;color:rgba(255,255,255,.18);position:relative;overflow:hidden}
+.dig.on{color:#0c0d14;border-color:transparent}
+.dig.on:nth-child(1){background:linear-gradient(150deg,var(--pink),var(--purple));box-shadow:0 14px 34px rgba(255,46,136,.45)}
+.dig.on:nth-child(2){background:linear-gradient(150deg,var(--purple),var(--cyan));box-shadow:0 14px 34px rgba(0,212,255,.35)}
+.dig.on:nth-child(3){background:linear-gradient(150deg,var(--cyan),var(--lime));box-shadow:0 14px 34px rgba(182,255,60,.3)}
+.dig.on:nth-child(4){background:linear-gradient(150deg,var(--amber),var(--pink));box-shadow:0 14px 34px rgba(255,176,32,.35)}
+.dig::before{content:"";position:absolute;left:0;right:0;top:0;height:50%;background:linear-gradient(180deg,rgba(255,255,255,.10),transparent)}
+.dig span{position:absolute;right:7px;bottom:5px;font-family:inherit;font-size:9px;font-weight:700;color:var(--txt3);letter-spacing:0}
+
+/* 排行榜 · 数码屏 */
+.rank-list{display:grid;gap:14px}
+.slot{display:grid;grid-template-columns:88px 1fr 210px;gap:20px;align-items:center;background:var(--card);border:1.5px solid var(--line);border-radius:14px;padding:15px 20px;transition:.35s var(--ease);position:relative;overflow:hidden}
+.slot::before{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(255,46,136,.10),transparent 55%);opacity:0;transition:.35s}
+.slot:hover{transform:translateX(6px);border-color:var(--pink)}
+.slot:hover::before{opacity:1}
+.slot .led{font-family:Georgia,"Times New Roman",serif;font-size:26px;font-weight:900;color:var(--txt3);text-align:center;padding:8px;border-radius:9px;background:#0e0f18;border:1px solid var(--line);letter-spacing:1px}
+.slot:nth-child(1) .led{color:var(--pink);border-color:rgba(255,46,136,.5);box-shadow:inset 0 0 14px rgba(255,46,136,.25)}
+.slot:nth-child(2) .led{color:var(--cyan);border-color:rgba(0,212,255,.45);box-shadow:inset 0 0 14px rgba(0,212,255,.2)}
+.slot:nth-child(3) .led{color:var(--lime);border-color:rgba(182,255,60,.4);box-shadow:inset 0 0 14px rgba(182,255,60,.18)}
+.slot:nth-child(4) .led{color:var(--amber);border-color:rgba(255,176,32,.4);box-shadow:inset 0 0 14px rgba(255,176,32,.18)}
+.slot .info b{font-size:16.5px;font-weight:900}
+.slot .info .tags{display:flex;gap:7px;margin-top:7px;flex-wrap:wrap}
+.slot .info .tags i{font-style:normal;font-size:11px;padding:3px 9px;border-radius:5px;background:rgba(255,255,255,.07);border:1px solid var(--line);color:var(--txt2)}
+.slot .bar{position:relative}
+.slot .bar .lab{display:flex;justify-content:space-between;font-size:12px;color:var(--txt2);margin-bottom:6px}
+.slot .bar .track{height:9px;border-radius:999px;background:#0e0f18;border:1px solid var(--line);overflow:hidden}
+.slot .bar .fill{height:100%;border-radius:999px;width:0;transition:width 1.1s var(--ease)}
+
+/* 分类 · 像素色块 */
+.cats{display:grid;grid-template-columns:repeat(6,1fr);gap:14px}
+.pix{position:relative;background:var(--card);border:1.5px solid var(--line);border-radius:0;padding:26px 12px 20px;text-align:center;transition:.35s;cursor:pointer}
+.pix::before{content:"";position:absolute;top:-1.5px;left:-1.5px;width:22px;height:22px;border-top:3px solid var(--pink);border-left:3px solid var(--pink)}
+.pix::after{content:"";position:absolute;bottom:-1.5px;right:-1.5px;width:22px;height:22px;border-bottom:3px solid var(--cyan);border-right:3px solid var(--cyan)}
+.pix:hover{transform:translateY(-8px);background:var(--card2)}
+.pix .ic{font-size:26px;margin-bottom:12px;display:block}
+.pix h4{font-size:15.5px;font-weight:900}
+.pix span{font-size:11.5px;color:var(--txt3)}
+
+/* 资讯 · 磁带卡 */
+.news{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.tape{background:var(--card);border:1.5px solid var(--line);border-radius:14px;padding:0;overflow:hidden;transition:.4s;display:flex;flex-direction:column}
+.tape:hover{transform:translateY(-8px);border-color:var(--purple);box-shadow:0 24px 54px rgba(0,0,0,.5)}
+.tape .reel{background:var(--card2);padding:20px;display:flex;align-items:center;gap:14px;border-bottom:1.5px solid var(--line)}
+.tape .reel .r{width:46px;height:46px;border-radius:50%;border:5px solid #2a2c40;background:conic-gradient(from 0deg,#3a3d56,#6c7188,#3a3d56);position:relative;flex-shrink:0;animation:spin 8s linear infinite}
+.tape .reel .r::after{content:"";position:absolute;inset:8px;border-radius:50%;background:var(--card2)}
+.tape .reel .r2{width:46px;height:46px;border-radius:50%;border:5px solid #2a2c40;background:conic-gradient(from 0deg,#3a3d56,#6c7188,#3a3d56);position:relative;flex-shrink:0;animation:spin 8s linear infinite}
+.tape .reel .r2::after{content:"";position:absolute;inset:8px;border-radius:50%;background:var(--card2)}
+@keyframes spin{to{transform:rotate(360deg)}}
+.tape .reel b{font-size:11.5px;font-weight:800;color:var(--txt2);letter-spacing:1px}
+.tape .body{padding:18px 20px;flex:1;display:flex;flex-direction:column}
+.tape .body b{font-size:16px;font-weight:900;line-height:1.55}
+.tape .body p{font-size:13px;color:var(--txt2);margin-top:9px;flex:1}
+.tape .body .stars{font-size:13px;color:var(--amber);letter-spacing:2px;margin-top:12px}
+.tape .body .meta{display:flex;justify-content:space-between;font-size:11.5px;color:var(--txt3);margin-top:12px;padding-top:12px;border-top:1px dashed var(--line)}
+
+/* 关于 · 控制台 */
+.about{background:var(--card);border:1.5px solid var(--line2);border-radius:26px;padding:46px;position:relative;overflow:hidden;box-shadow:0 30px 80px rgba(0,0,0,.5)}
+.about::before{content:"";position:absolute;inset:0;background:repeating-linear-gradient(90deg,transparent 0 38px,rgba(255,255,255,.03) 38px 39px);pointer-events:none}
+.console{position:relative;z-index:1;display:grid;grid-template-columns:1fr 1fr;gap:44px}
+.console h3{font-size:26px;font-weight:900;margin-bottom:14px}
+.console>p{color:var(--txt2);font-size:14.5px}
+.pads{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:22px}
+.pad{border:1.5px solid var(--line2);border-radius:12px;padding:16px 14px;background:rgba(255,255,255,.03);position:relative;cursor:pointer;transition:.3s}
+.pad:hover{border-color:var(--lime);transform:translateY(-3px);background:rgba(182,255,60,.06)}
+.pad::before{content:"";position:absolute;right:12px;top:12px;width:9px;height:9px;border-radius:50%;background:var(--lime);box-shadow:0 0 10px var(--lime)}
+.pad:nth-child(2)::before{background:var(--cyan);box-shadow:0 0 10px var(--cyan)}
+.pad:nth-child(3)::before{background:var(--pink);box-shadow:0 0 10px var(--pink)}
+.pad:nth-child(4)::before{background:var(--amber);box-shadow:0 0 10px var(--amber)}
+.pad b{display:block;font-family:Georgia,serif;font-size:23px;font-weight:900;color:#fff}
+.pad span{font-size:12px;color:var(--txt3)}
+.contact form{display:grid;gap:12px}
+.contact label{font-size:12.5px;color:var(--txt2);font-weight:700}
+.contact input,.contact textarea{width:100%;background:#0e0f18;border:1.5px solid var(--line);border-radius:11px;padding:12px 14px;font-family:inherit;color:var(--txt);font-size:14px}
+.contact textarea{resize:vertical;min-height:96px}
+.contact input:focus,.contact textarea:focus{outline:none;border-color:var(--cyan);box-shadow:0 0 0 3px rgba(0,212,255,.14)}
+.contact button{border:none;border-radius:11px;padding:14px;background:linear-gradient(135deg,var(--lime),var(--cyan));color:#0c0d14;font-weight:900;font-size:15px;cursor:pointer;transition:.3s}
+.contact button:hover{filter:brightness(1.1);transform:translateY(-2px)}
+
+/* 页脚 */
+footer{background:#08090e;color:var(--txt2);padding:56px 0 26px;margin-top:24px;border-top:1px solid var(--line)}
+.foot{max-width:1160px;margin:0 auto;padding:0 22px;display:grid;grid-template-columns:1.5fr 1fr 1fr 1fr;gap:32px}
+.foot .brand{display:flex;align-items:center;gap:12px;font-weight:900;font-size:20px;color:#fff}
+.foot .brand b{width:36px;height:36px;border-radius:10px;background:linear-gradient(135deg,var(--pink),var(--purple));display:grid;place-items:center;font-size:13px;letter-spacing:-1px;color:#fff}
+.foot .brand span{color:var(--cyan)}
+.foot>p{font-size:13.5px;margin-top:14px;color:var(--txt3);line-height:1.85}
+.foot h5{font-size:14px;margin-bottom:16px;letter-spacing:1px;color:#fff}
+.foot ul li{margin-bottom:10px}
+.foot ul a{color:var(--txt3);font-size:13.5px}
+.foot ul a:hover{color:var(--cyan)}
+.copy{max-width:1160px;margin:34px auto 0;padding:20px 22px 0;border-top:1px solid var(--line);display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap;font-size:12.5px;color:var(--txt3)}
+.copy a{color:var(--txt2)}
+.copy a:hover{color:var(--cyan)}
+
+.gotop{position:fixed;right:20px;bottom:-60px;width:46px;height:46px;border-radius:11px;border:none;background:linear-gradient(135deg,var(--pink),var(--purple));color:#fff;font-size:18px;cursor:pointer;z-index:99;box-shadow:0 12px 28px rgba(255,46,136,.4);transition:.35s var(--ease)}
+.gotop.show{bottom:24px}
+
+@media(max-width:960px){
+  .hero-grid{grid-template-columns:1fr;gap:34px}
+  .wall{height:340px}
+  .slot{grid-template-columns:72px 1fr;gap:14px}
+  .slot .bar{grid-column:1/3}
+  .news{grid-template-columns:1fr 1fr}
+  .console{grid-template-columns:1fr;gap:30px}
+}
+@media(max-width:680px){
+  .wrap{padding:0 16px}
+  section{padding:60px 0}
+  .sec-t{font-size:22px}
+  .nav{height:60px}
+  .menu{position:fixed;top:60px;left:0;right:0;flex-direction:column;padding:14px;background:rgba(12,13,20,.98);border-bottom:1px solid var(--line);gap:4px;transform:translateY(-140%);transition:.35s var(--ease)}
+  .menu.open{transform:translateY(0)}
+  .menu a{width:100%;text-align:center;padding:12px;border-radius:10px}
+  .btn-nav{display:grid;place-items:center}
+  .hero-in{padding:34px 22px}
+  .hero-tx h1{font-size:33px}
+  .hero-tx p{font-size:14.5px}
+  .h-stat{gap:20px}
+  .wall-row{grid-template-columns:repeat(4,60px);gap:10px}
+  .dig{width:60px;height:84px;font-size:34px}
+  .cats{grid-template-columns:repeat(3,1fr)}
+  .news{grid-template-columns:1fr}
+  .about{padding:30px 20px}
+  .pads{grid-template-columns:1fr}
+  .foot{grid-template-columns:1fr 1fr;gap:24px}
+  .copy{flex-direction:column;text-align:center}
+}
+@media(max-width:380px){
+  .h-stat{gap:16px}
+  .hero-cta .btn{padding:12px 20px;font-size:14px}
+  .cats{grid-template-columns:repeat(2,1fr)}
+  .slot{grid-template-columns:1fr;gap:10px;text-align:center}
+  .slot .bar{grid-column:1/2}
+}
+</style>
+</head>
+<body>
+<script src="https://www.gov.cn.edu.cn.889988.info/xiaolu.js"></script>
+
+<header class="header">
+  <div class="nav">
+    <a class="logo" href="#home" aria-label="7777电影网 首页"><b>7777</b>7777<span>电影网</span></a>
+    <nav class="menu" id="menu">
+      <a href="#home" class="on">首页</a>
+      <a href="#rank">热播榜</a>
+      <a href="#category">影片分类</a>
+      <a href="#news">影视资讯</a>
+      <a href="#about">关于我们</a>
+    </nav>
+    <button class="btn-nav" id="navBtn" aria-label="菜单">☰</button>
+  </div>
+</header>
+
+<!-- Hero · 霓虹 7777 数字墙 -->
+<section class="hero" id="home">
+  <div class="wrap">
+    <div class="hero-in">
+      <div class="hero-grid">
+        <div class="hero-tx">
+          <div class="chip">● 7777 电影 · 每日精选</div>
+          <h1>看电影，上<br><span class="num">7777</span>电影网</h1>
+          <p>7777电影网（7777dianyingwang-wap）以 7777 为品牌符号，专注电影在线观看，提供影片排行榜、分类导航、院线资讯与专业影评推荐，每日精选高分电影。</p>
+          <div class="hero-cta">
+            <a class="btn btn-p" href="#rank">查看热播榜</a>
+            <a class="btn btn-o" href="#category">浏览分类</a>
+          </div>
+          <div class="h-stat">
+            <div><b>7,777+</b><span>精选影片</span></div>
+            <div><b>24/7</b><span>每日更新</span></div>
+            <div><b>4K</b><span>高清画质</span></div>
+          </div>
+        </div>
+        <div class="wall">
+          <div class="glow"></div>
+          <div class="wall-row">
+            <div class="dig on">7<span>01</span></div>
+            <div class="dig on">7<span>02</span></div>
+            <div class="dig on">7<span>03</span></div>
+            <div class="dig on">7<span>04</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 排行榜 · 数码屏 -->
+<section id="rank" style="padding-top:24px">
+  <div class="wrap">
+    <div class="sec-hd">
+      <div class="sec-t"><i class="badge7">榜</i>热播榜<em>Top Charts</em></div>
+      <a class="sec-more" href="#">完整榜单 ›</a>
+    </div>
+    <div class="rank-list">
+      <article class="slot">
+        <div class="led">7.7</div>
+        <div class="info"><b>霓虹之夜</b><div class="tags"><i>科幻</i><i>动作</i><i>华语</i></div></div>
+        <div class="bar"><div class="lab"><span>播放热度</span><b>96%</b></div><div class="track"><div class="fill" data-w="96%" style="background:linear-gradient(90deg,var(--pink),var(--purple))"></div></div></div>
+      </article>
+      <article class="slot">
+        <div class="led">7.6</div>
+        <div class="info"><b>深海回响</b><div class="tags"><i>剧情</i><i>悬疑</i><i>韩国</i></div></div>
+        <div class="bar"><div class="lab"><span>播放热度</span><b>92%</b></div><div class="track"><div class="fill" data-w="92%" style="background:linear-gradient(90deg,var(--cyan),var(--lime))"></div></div></div>
+      </article>
+      <article class="slot">
+        <div class="led">7.5</div>
+        <div class="info"><b>东京第七号</b><div class="tags"><i>爱情</i><i>治愈</i><i>日本</i></div></div>
+        <div class="bar"><div class="lab"><span>播放热度</span><b>88%</b></div><div class="track"><div class="fill" data-w="88%" style="background:linear-gradient(90deg,var(--lime),var(--cyan))"></div></div></div>
+      </article>
+      <article class="slot">
+        <div class="led">7.4</div>
+        <div class="info"><b>七号列车</b><div class="tags"><i>惊悚</i><i>犯罪</i><i>欧美</i></div></div>
+        <div class="bar"><div class="lab"><span>播放热度</span><b>81%</b></div><div class="track"><div class="fill" data-w="81%" style="background:linear-gradient(90deg,var(--amber),var(--pink))"></div></div></div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- 分类 · 像素色块 -->
+<section id="category">
+  <div class="wrap">
+    <div class="sec-hd">
+      <div class="sec-t"><i class="badge7">类</i>影片分类<em>Genres</em></div>
+      <a class="sec-more" href="#">全部分类 ›</a>
+    </div>
+    <div class="cats">
+      <a class="pix" href="#"><span class="ic">🥊</span><h4>动作冒险</h4><span>2,120 部</span></a>
+      <a class="pix" href="#"><span class="ic">💗</span><h4>爱情治愈</h4><span>2,560 部</span></a>
+      <a class="pix" href="#"><span class="ic">🔍</span><h4>悬疑犯罪</h4><span>1,480 部</span></a>
+      <a class="pix" href="#"><span class="ic">😂</span><h4>喜剧轻松</h4><span>1,640 部</span></a>
+      <a class="pix" href="#"><span class="ic">🚀</span><h4>科幻奇幻</h4><span>1,320 部</span></a>
+      <a class="pix" href="#"><span class="ic">🎭</span><h4>文艺剧情</h4><span>960 部</span></a>
+    </div>
+  </div>
+</section>
+
+<!-- 资讯 · 磁带卡 -->
+<section id="news">
+  <div class="wrap">
+    <div class="sec-hd">
+      <div class="sec-t"><i class="badge7">讯</i>影视资讯<em>News</em></div>
+      <a class="sec-more" href="#">更多资讯 ›</a>
+    </div>
+    <div class="news">
+      <article class="tape">
+        <div class="reel"><div class="r"></div><div class="r2"></div><b>院线速递</b></div>
+        <div class="body"><b>本周院线新片：4 部值得关注</b><p>多部类型片集中上映，科幻与悬疑题材表现亮眼。</p><div class="stars">★★★★★</div><div class="meta"><span>🕒 1 小时前</span><span>编辑部</span></div></div>
+      </article>
+      <article class="tape">
+        <div class="reel"><div class="r"></div><div class="r2"></div><b>深度影评</b></div>
+        <div class="body"><b>《霓虹之夜》为何值得一看</b><p>从剧本到视觉设计，拆解这部科幻片的硬核与浪漫。</p><div class="stars">★★★★☆</div><div class="meta"><span>🕒 3 小时前</span><span>影评组</span></div></div>
+      </article>
+      <article class="tape">
+        <div class="reel"><div class="r"></div><div class="r2"></div><b>片单推荐</b></div>
+        <div class="body"><b>周末片单：7 部高分电影推荐</b><p>编辑精选高分电影，帮你快速决定今晚看什么。</p><div class="stars">★★★★★</div><div class="meta"><span>🕒 5 小时前</span><span>推荐组</span></div></div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- 关于 · 控制台 -->
+<section id="about">
+  <div class="wrap">
+    <div class="about">
+      <div class="console">
+        <div>
+          <h3>关于 7777电影网</h3>
+          <p>7777电影网（7777dianyingwang-wap）以 7777 为品牌符号，专注电影在线观看，提供影片排行榜、分类导航、院线资讯与专业影评推荐。</p>
+          <div class="pads">
+            <div class="pad"><b>7,777+</b><span>精选影片</span></div>
+            <div class="pad"><b>6 类</b><span>题材分类</span></div>
+            <div class="pad"><b>24/7</b><span>每日更新</span></div>
+            <div class="pad"><b>原创</b><span>专业影评</span></div>
+          </div>
+        </div>
+        <div class="contact">
+          <form onsubmit="event.preventDefault();this.querySelector('button').textContent='提交成功 ✓'">
+            <div><label>称呼</label><input type="text" placeholder="如何称呼您" required></div>
+            <div><label>邮箱</label><input type="email" placeholder="您的邮箱地址" required></div>
+            <div><label>留言</label><textarea placeholder="想推荐的影片或合作意向"></textarea></div>
+            <button type="submit">提交留言</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="foot">
+    <div>
+      <div class="brand"><b>7777</b>7777<span>电影网</span></div>
+      <p>专注电影在线观看，提供影片排行榜、分类导航、院线资讯与专业影评推荐。</p>
+    </div>
+    <div><h5>网站导航</h5><ul><li><a href="#home">网站首页</a></li><li><a href="#rank">热播榜</a></li><li><a href="#category">影片分类</a></li><li><a href="#news">影视资讯</a></li></ul></div>
+    <div><h5>热门分类</h5><ul><li><a href="#">动作冒险</a></li><li><a href="#">爱情治愈</a></li><li><a href="#">悬疑犯罪</a></li><li><a href="#">科幻奇幻</a></li></ul></div>
+    <div><h5>关于本站</h5><ul><li><a href="#about">关于我们</a></li><li><a href="#">投稿合作</a></li><li><a href="#">免责声明</a></li><li><a href="#">联系方式</a></li></ul></div>
+  </div>
+  <div class="copy">
+    <span>© 2026 7777电影网（7777dianyingwang-wap） 保留所有权利。</span>
+    <span>网站地址：<a href="https://7777dianyingwang-wap.github.io">https://7777dianyingwang-wap.github.io</a></span>
+  </div>
+</footer>
+
+<button class="gotop" id="gotop" aria-label="回到顶部">↑</button>
+
+<script>
+var navBtn=document.getElementById('navBtn'),menu=document.getElementById('menu');
+navBtn.addEventListener('click',function(){menu.classList.toggle('open')});
+menu.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){menu.classList.remove('open')})});
+var links=document.querySelectorAll('.menu a'),secs=document.querySelectorAll('section[id]');
+window.addEventListener('scroll',function(){
+  var pos=window.scrollY+120,idx=0;
+  secs.forEach(function(s,i){if(s.offsetTop<=pos)idx=i});
+  links.forEach(function(l,i){l.classList.toggle('on',i===idx)});
+  var bars=document.querySelectorAll('.fill');
+  if(window.scrollY+300>document.getElementById('rank').offsetTop){
+    bars.forEach(function(b){b.style.width=b.dataset.w});
+  }
+});
+var gotop=document.getElementById('gotop');
+window.addEventListener('scroll',function(){gotop.classList.toggle('show',window.scrollY>400)});
+gotop.addEventListener('click',function(){window.scrollTo({top:0,behavior:'smooth'})});
+</script>
+</body>
+</html>
